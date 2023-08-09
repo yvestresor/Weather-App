@@ -18,7 +18,7 @@
     const visibilityDisplay = document.getElementById('visibility');
     const windDisplay = document.getElementById('wind');
     const humidityDisplay = document.getElementById('humidity');
-    const uvDisplay = document.getElementById('uv');
+    const moon_phaseDisplay = document.getElementById('moon_phase');
     const sunriseDisplay = document.getElementById('sunrise');
     const sunsetDisplay = document.getElementById('sunset');
     const celBtn = document.getElementById('cel-btn');
@@ -102,7 +102,8 @@
         this.feelslike_f = Math.round(data.current.feelslike_f);
         this.feelslike_c = Math.round(data.current.feelslike_c);
         this.humidity = data.current.humidity;
-        this.uv = data.current.uv;
+        this.moon_phase = data.current.condition.text;
+        console.log(this.humidity+" "+this.moon_phase);
         this.cloud = data.current.cloud;
         this.wind_mph = Math.round(data.current.wind_mph);
         this.wind_kph = Math.round(data.current.wind_kph);
@@ -441,7 +442,8 @@
         visibilityDisplay.textContent = vis;
         windDisplay.textContent = wind;
         humidityDisplay.textContent = `${data.humidity}%`;
-        uvDisplay.textContent = data.uv;
+        console.log(data.moon_phase);
+        moon_phaseDisplay.textContent = data.moon_phase;
         sunriseDisplay.textContent = sunrise;
         sunsetDisplay.textContent = sunset;
     
