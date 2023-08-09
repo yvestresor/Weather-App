@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>myWeather</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <div class="header-txt"><img src="images/logo.png" alt="" width="80"><img src="images/logo1.png" alt="" width="80">
+                <img src="images/logo.png" alt="" width="80">
+                <img src="images/logo1.png" alt="" width="80"></div>
+            <form action="" method="get" class="search-form">
+                <input type="search" class="search-input" required placeholder="Enter city name or zip code">
+                <button type="submit" class="submit-btn"><img src="images/search.svg" alt="search icon"></button>
+            </form>
+            <div class="unit-btns">
+                <button class="location-btn">My location <img src="images/pin.png" alt="search icon" width="20"></button>
+                <button id="cel-btn" class="selected">°C, kph</button>
+                <button id="far-btn">°F, mph</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="location-info">
+                <div class="location"></div>
+                <div class="local-time"></div>
+            </div>
+            <div class="current-forecast">
+                <div class="main-info">
+                    <div class="temp-container">
+                        <div class="temp"></div>
+                        <img src="" alt="" class="icon">
+                    </div>
+                    <div class="cond-container">
+                        <div class="condition"></div>
+                        <div class="feels-like"></div>
+                        <div class="high-low"></div>
+                    </div>
+                </div>
+                <div class="other-info">
+                    <div>
+                        <div class="info-title">Wind</div>
+                        <div id="wind" class="info-details"></div>
+                    </div>
+                    <div>
+                        <div class="info-title">Cloudiness</div>
+                        <div id="cloud" class="info-details"></div>
+                    </div>
+                    <div>
+                        <div class="info-title">Chance of Rain</div>
+                        <div id="rain" class="info-details"></div>
+                    </div>
+                    <div>
+                        <div class="info-title">Visibility</div>
+                        <div id="visibility" class="info-details"></div>
+                    </div>
+                    <div>
+                        <div class="info-title">Humidity</div>
+                        <div id="humidity" class="info-details"></div>
+                    </div>
+                    <div>
+                        <div class="info-title">UV</div>
+                        <div id="uv" class="info-details"></div>
+                    </div>
+                    <div>
+                        <div class="info-title">Sunrise</div>
+                        <div id="sunrise" class="info-details"></div>
+                    </div>
+                    <div>
+                        <div class="info-title">Sunset</div>
+                        <div id="sunset" class="info-details"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="forecast-btns">
+                <button id="daily-btn" class="selected">Daily</button>
+                <button id="hourly-btn">Hourly</button>
+            </div>
+            <div class="daily-forecast">
+                <div class="forecast-title">3-Day Forecast</div>
+                <div class="daily-container"></div>
+            </div>
+            <div class="hourly-forecast">
+                <div class="forecast-title">24-Hour Forecast</div>
+                <div class="hourly-container"></div>
+            </div>
+        </div>
+        <div class="error-msg"></div>
+        <script src="main.js"></script>
+    </body>
+</html>
