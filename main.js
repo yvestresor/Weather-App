@@ -540,7 +540,7 @@
     }
     
     // Initial display
-    getWeatherData('kigali');
+    getWeatherData('uganda');
     
     // Search new location
     submitBtn.addEventListener('click', (e) => {
